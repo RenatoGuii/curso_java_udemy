@@ -3,12 +3,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
-import exercicioComposicao1.contratoHora;
-import exercicioComposicao1.departamento;
-import exercicioComposicao1.funcionario;
-import exercicioComposicao1.nivelFuncionario;
+import exercicioComposicao1.ContratoHora;
+import exercicioComposicao1.Departamento;
+import exercicioComposicao1.Funcionario;
+import exercicioComposicao1.NivelFuncionario;
 
-public class AppComposicao {
+public class AppComposicao_1 {
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -20,7 +20,7 @@ public class AppComposicao {
 		System.out.println();
 		System.out.print("Digite o nome do departamento: ");
 		departamentoNome = sc.nextLine();
-		departamento d = new departamento(departamentoNome);
+		Departamento d = new Departamento(departamentoNome);
 		System.out.println();
 
 		System.out.println("Dados do funcionario: ");
@@ -34,7 +34,7 @@ public class AppComposicao {
 		salarioBase = sc.nextDouble();
 		System.out.println();
 
-		funcionario f = new funcionario(nome, nivelFuncionario.valueOf(lvlFuncionario), salarioBase, d);
+		Funcionario f = new Funcionario(nome, NivelFuncionario.valueOf(lvlFuncionario), salarioBase, d);
 
 		System.out.print("Quantos contratos foram destinados ao funcionario? ");
 		n = sc.nextInt();
@@ -54,7 +54,7 @@ public class AppComposicao {
 
 			System.out.println();
 
-			contratoHora novoContrato = new contratoHora(dataContrato, valorHora, horas);
+			ContratoHora novoContrato = new ContratoHora(dataContrato, valorHora, horas);
 
 			f.addContrato(novoContrato);
 

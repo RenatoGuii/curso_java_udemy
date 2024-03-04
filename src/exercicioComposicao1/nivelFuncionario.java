@@ -1,6 +1,6 @@
 package exercicioComposicao1;
 
-public enum nivelFuncionario {
+public enum NivelFuncionario {
     JUNIOR,
     MID_LEVEL,
     SENIOR

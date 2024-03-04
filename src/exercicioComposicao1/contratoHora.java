@@ -2,7 +2,7 @@ package exercicioComposicao1;
 
 import java.time.LocalDate;
 
-public class contratoHora {
+public class ContratoHora {
 
     private LocalDate data;
     private Double valorPorHora;
@@ -16,7 +16,7 @@ public class contratoHora {
         return data;
     }
 
-    public contratoHora(LocalDate data, Double valorPorHora, Integer horas) {
+    public ContratoHora(LocalDate data, Double valorPorHora, Integer horas) {
         this.data = data;
         this.valorPorHora = valorPorHora;
         this.horas = horas;

@@ -1,6 +1,6 @@
 package exercicioComposicao1;
 
-public class departamento {
+public class Departamento {
 
     private String nome;
 
@@ -12,7 +12,7 @@ public class departamento {
         this.nome = nome;
     }
 
-    public departamento(String nome) {
+    public Departamento(String nome) {
         this.nome = nome;
     }
 

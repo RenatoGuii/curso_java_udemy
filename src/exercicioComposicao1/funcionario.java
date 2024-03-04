@@ -3,20 +3,20 @@ package exercicioComposicao1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class funcionario {
+public class Funcionario {
 
     private String nome;
-    private nivelFuncionario nivel;
+    private NivelFuncionario nivel;
     private Double baseSalarial;
 
-    private departamento departamento;
-    private List<contratoHora> contratos = new ArrayList<>();
+    private Departamento departamento;
+    private List<ContratoHora> contratos = new ArrayList<>();
 
-    public departamento getDepartamento() {
+    public Departamento getDepartamento() {
         return departamento;
     }
 
-    public void setDepartamento(departamento departamento) {
+    public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
 
@@ -28,11 +28,11 @@ public class funcionario {
         this.nome = nome;
     }
 
-    public nivelFuncionario getNivel() {
+    public NivelFuncionario getNivel() {
         return nivel;
     }
 
-    public void setNivel(nivelFuncionario nivel) {
+    public void setNivel(NivelFuncionario nivel) {
         this.nivel = nivel;
     }
 
@@ -44,18 +44,18 @@ public class funcionario {
         this.baseSalarial = baseSalarial;
     }
 
-    public funcionario(String nome, nivelFuncionario nivel, Double baseSalarial, departamento departamento) {
+    public Funcionario(String nome, NivelFuncionario nivel, Double baseSalarial, Departamento departamento) {
         this.nome = nome;
         this.nivel = nivel;
         this.baseSalarial = baseSalarial;
         this.departamento = departamento;
     }
 
-    public void addContrato(contratoHora contrato) {
+    public void addContrato(ContratoHora contrato) {
         this.contratos.add(contrato);
     }
 
-    public void removerContrato(contratoHora contrato) {
+    public void removerContrato(ContratoHora contrato) {
         this.contratos.remove(contrato);
     }
 
@@ -63,7 +63,7 @@ public class funcionario {
 
         Double rendaFinal = this.baseSalarial;
 
-        for (contratoHora c : contratos) {
+        for (ContratoHora c : contratos) {
 
             int ano_c = c.getData().getYear();
             int mes_c = c.getData().getMonthValue();
