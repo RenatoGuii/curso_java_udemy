@@ -45,6 +45,7 @@ public class AppSet {
 
 		System.out.printf("Estudantes totais: %s", qntdAlunos.size());
 
+		sc.close();
 	}
 
 }
